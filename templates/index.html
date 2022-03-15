@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+    <h1>Угадай Город</h1>
+    <div id="guess_city">
+        <img src="static/img/{{ image_name }}" class="rounded mx-auto d-block" alt="city">
+    </div>
+{% endblock %}
