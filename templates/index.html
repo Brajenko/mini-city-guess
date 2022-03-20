@@ -9,5 +9,21 @@
     <h1>Угадай Город</h1>
     <div id="guess_city">
         <img src="static/img/{{ image_name }}" class="rounded mx-auto d-block" alt="city">
+        <br>
+        <form class="form-inline justify-content-center" method="post" action="">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group mx-sm-3 mb-2">
+                {{ form.city_name(class="form-control", type="text") }}
+              </div>
+
+            {{ form.submit(type="submit", class="btn btn-dark") }}
+          </form>
+        
+        {% if fail %}
+        <div class="alert alert-danger" role="alert">
+            Неправильный город, попробуйте другой!
+          </div>
+        {% endif %}
     </div>
 {% endblock %}
