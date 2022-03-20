@@ -1,4 +1,4 @@
-from email.mime import image
+import os
 from flask import Flask, render_template, redirect
 from city_images import CityChecker
 
