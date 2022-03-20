@@ -1,8 +1,6 @@
 from email.mime import image
-from tkinter import image_names
 from flask import Flask, render_template, redirect
 from city_images import CityChecker
-import random
 
 from flask_wtf import FlaskForm
 from wtforms import *
